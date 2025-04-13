@@ -23,7 +23,7 @@ export function RecipeCard({ id, title, image, prepTime, servings, index }: Reci
       >
         <div className="relative h-48 w-full">
           <Image
-            src={image || "/placeholder.svg"}
+            src={image}
             alt={title}
             fill
             className="object-cover"
