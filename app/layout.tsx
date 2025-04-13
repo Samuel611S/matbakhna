@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description: "Find recipes based on ingredients in your fridge",
   icons: {
     icon: [{ url: "/icon.png", sizes: "32x32", type: "image/png" }],
+    shortcut: [{ url: "/FridgeKitchen.png", type: "image/png" }],
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
     generator: 'v0.dev'
