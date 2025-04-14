@@ -64,14 +64,19 @@
     --input: 150 30% 20%;
     --ring: 142 76% 36%;
   }
-}
 
-@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   * {
     @apply border-border;
   }
-  body {
+
+  html, body {
     @apply bg-background text-foreground;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
 

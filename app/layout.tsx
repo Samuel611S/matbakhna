@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/FridgeKitchen.png", type: "image/png" }],
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
-    generator: 'v0.dev'
+  generator: "v0.dev"
 }
 
 export default function RootLayout({
@@ -26,14 +26,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </head>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 container mx-auto px-4 sm:px-6 md:px-8">
+              {children}
+            </main>
             <Footer />
           </div>
         </ThemeProvider>
@@ -41,6 +43,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-import './globals.css'
